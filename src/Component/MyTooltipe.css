@@ -1,0 +1,90 @@
+:root {
+    --background-color: white;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:6rem;
+}
+
+.tooltip-text {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  padding: 5px 10px;
+  width: auto;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.top {
+  bottom: 100%;
+  margin-bottom: 5px;
+  left: 1%;
+ margin-left:-55px
+}
+
+.top::after{
+  content:" ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:var(--background-color) transparent transparent transparent
+}
+
+.bottom {
+  top: 100%;
+  margin: 5px 0 0 -100px;
+  left: 50%;  
+}
+
+.bottom::after{
+content: " ";
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--background-color)  transparent;
+
+}
+
+.left{
+    top: 0;
+    right: 100%;
+    margin-right:5px;
+    
+}
+.left::after{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--background-color)
+}
+
+.right{
+    position: absolute;
+    top:0;
+    left:12%;
+
+}
+.right::after{
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent  var(--background-color) transparent transparent 
+}
